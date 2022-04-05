@@ -27,6 +27,8 @@ products = products.to_dict('records')
 
 
 
+
+
 # PRINTED INVENTORY REPORT
 
 print("---------")
