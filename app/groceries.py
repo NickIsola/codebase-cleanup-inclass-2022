@@ -46,3 +46,5 @@ print("AVERAGE PRICE:", to_usd(avg_price))
 
 
 # EMAIL INVENTORY REPORT
+
+
