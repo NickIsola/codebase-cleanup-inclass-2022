@@ -6,15 +6,7 @@
 #products = products_df.to_dict("records")
 
 import os
-
-def to_usd(my_price):
-    """
-    takes in an float number value,
-    returns a string with an appended $ sign 
-    and number formatted to 2 decimal places
-    Invoke like this: to_usd(9.999)
-    """
-    return '${:,.2f}'.format(my_price)
+from app.utils import to_usd
 
 # checks to see if a products.csv file exists. If not, it uses the default
 if os.path.isfile(os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")) == True:
@@ -41,16 +33,13 @@ print("---------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
-for p in products:
-    print("..." + p["name"] + "   " + to_usd(p["price"]))
-
-
 all_prices = []
 for p in products:
+    print("..." + p["name"] + "   " + to_usd(p["price"]))
     all_prices.append(float(p["price"]))
 
 import statistics
-avg_price = statistics.median(all_prices)
+avg_price = statistics.median(all_prices) #is this supposed to be median?
 
 print("---------")
 print("AVERAGE PRICE:", to_usd(avg_price))
