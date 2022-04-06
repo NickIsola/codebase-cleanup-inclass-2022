@@ -1,10 +1,20 @@
 
 
-
 from random import choice
 
 def determine_winner(user_choice, computer_choice):
-    #return "paper"
+    """
+    takes in 2 parameters:
+    (1) a user inputed value, either a rock, paper, or scissors string
+    and (2) a randomly generated computer input value, either a rock, paper, or scissors string
+
+    determines the winner by comparing (1) and (2) according to rps logic
+    
+    returns a string containing a letter that corresponds to who won the game
+
+    Invoke like this: determine_winner(user_choice, computer_choice)
+    """
+    
     winners = {
         "rock": {
             "rock": None,
