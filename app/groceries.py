@@ -35,19 +35,16 @@ print("---------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
-for p in products:
-    print("..." + p["name"] + "   " + to_usd(p["price"]))
-
 
 all_prices = []
 for p in products:
+    print("..." + p["name"] + "   " + to_usd(p["price"]))
     all_prices.append(float(p["price"]))
 
 import statistics
-avg_price = statistics.median(all_prices)
+avg_price = statistics.median(all_prices) #is this supposed to be median?
 
 print("---------")
 print("AVERAGE PRICE:", to_usd(avg_price))
 
 
-# EMAIL INVENTORY REPORT
