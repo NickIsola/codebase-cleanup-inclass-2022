@@ -45,6 +45,7 @@ for p in products:
 import statistics
 avg_price = statistics.median(all_prices) #is this supposed to be mean?
 
+
 print("---------")
 print("AVERAGE PRICE:", to_usd(avg_price))
 
