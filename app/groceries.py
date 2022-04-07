@@ -27,11 +27,14 @@ products = products.to_dict('records')
 
 
 
+
+
 # PRINTED INVENTORY REPORT
 
 print("---------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
+
 
 all_prices = []
 for p in products:
@@ -43,8 +46,5 @@ avg_price = statistics.median(all_prices) #is this supposed to be mean?
 
 print("---------")
 print("AVERAGE PRICE:", to_usd(avg_price))
-
-
-# EMAIL INVENTORY REPORT
 
 

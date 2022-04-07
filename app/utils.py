@@ -3,10 +3,12 @@
 
 def to_usd(my_price):
     """
+
     takes in an float number value,
     returns a string with an appended $ sign 
     and number formatted to 2 decimal places
     Invoke like this: to_usd(9.999)
+
     """
     return '${:,.2f}'.format(my_price)
 
