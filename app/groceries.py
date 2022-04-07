@@ -39,7 +39,7 @@ for p in products:
     all_prices.append(float(p["price"]))
 
 import statistics
-avg_price = statistics.median(all_prices) #is this supposed to be median?
+avg_price = statistics.median(all_prices) #is this supposed to be mean?
 
 print("---------")
 print("AVERAGE PRICE:", to_usd(avg_price))
